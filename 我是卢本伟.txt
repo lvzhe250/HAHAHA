@@ -1,0 +1,11 @@
+public class FileWriter : IFileWriter
+{
+    public void WriteFile(string filePath, string data)
+    {
+        // 使用StreamWriter写入文件，自动创建或覆盖目标文件
+        using (var writer = new StreamWriter(filePath))
+        {
+            writer.Write(data);
+        }
+    }
+}
